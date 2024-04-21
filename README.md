@@ -1,23 +1,23 @@
 # Python-Web-IDE
 -----------
-> 一个简易的在线Python的IDE    
-> 基于Vue3 + Python3.10 + Tornado6.1实现    
-> 前后端分离
+> Un IDE en línea simple para Python  
+> Implementado con Vue3 + Python3.10 + Tornado6.1
+> Frontend y backend separados
 
-## 功能说明
-- 支持工程、文件、文件夹的增删查改
-- 支持Python代码基本补全
-- 支持Python代码(GUI不支持)运行管理和输出
-- 支持Markdown文件的编辑和预览
+## Descripción de funcionalidades
+- Admite la creación, eliminación, consulta y modificación de proyectos, archivos y carpetas
+- Admite el autocompletado básico de código Python
+- Admite la ejecución y gestión de código Python (no compatible con GUI) y su salida
+- Admite la edición y vista previa de archivos Markdown
   
-## 更新说明
-- 基于Vue3+Python3.10的全新实现
-- 引入markdown编辑器
-- 引入图标vscode-icons
-- 更改编辑器主题
+## Notas de actualización
+- Nueva implementación basada en Vue3 + Python3.10
+- Se incorpora un editor de Markdown
+- Se incorporan iconos vscode-icons
+- Se cambia el tema del editor
 
-## 编译和运行
-### 环境
+## Compilación y ejecución
+### Entorno
 - Node: 16.13.2
 - Npm: 8.1.2
 - Python: 3.10
@@ -25,33 +25,36 @@
 
 ### 前端
 ```bash
-# 安装依赖
+# Instalar dependencias
 npm install 或者 yarn install
 
-# 开发运行(默认端口是8080)
+# Ejecutar en modo desarrollo (el puerto predeterminado es 8080)
 npm run serve
 
-# 打包编译(默认打包的路径在dist目录，后端程序已经配置从该目录加载资源)
+# Compilar y empaquetar (la ruta predeterminada del paquete es el directorio dist, el programa backend ya está configurado para cargar recursos desde este directorio)
 npm run build
 ```
 
-### 后端
+### Backend
 ```bash
-# 假定已经安装好Python环境（建议使用虚拟Python环境并激活）
+# Suponiendo que el entorno de Python ya está instalado (se recomienda utilizar un entorno virtual de Python y activarlo)
 
-# 进入后端目录
+# Ingrese al directorio backend  
 cd server
 
-# 安装依赖
+# Instalar dependencias
 pip install -r requirements.txt
 
-# 运行（运行端口为10086）指定端口可以使用参数 --port=10010
-# 如果前端页面是独立运行的，不可指定后端端口（除非修改前端代码）
+# Ejecutar (el puerto de ejecución es 10086) se puede especificar un puerto con el parámetro --port=10010
+
+# Si la página frontend se ejecuta de forma independiente, no se puede especificar el puerto backend (a menos que se modifique el código frontend)  
 python server.py
 
-# 访问 (工程保存在projects/ide里面)
-# 开发运行前端的情况: localhost:8080
-# 打包好前端的情况: localhost:10086
+# Acceder (los proyectos se guardan en projects/ide)
+
+# Ejecutando frontend en modo desarrollo: localhost:8080
+
+# Frontend empaquetado: localhost:10086
 ```
 
 ![py_code](docs/img/py_code.png?raw=true)
